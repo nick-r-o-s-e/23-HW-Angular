@@ -1,0 +1,21 @@
+<div class="main-container">
+  <div class="list-wrapper">
+    <h1>Services</h1>
+    <div class="services">
+      <div
+        class="service-btn info"
+        [ngClass]="{ picked: service.picked }"
+        *ngFor="let service of services"
+        (click)="clickService(service.title)"
+      >
+        <span>{{ service.title }}</span>
+        <span>{{ service.price | currency }}</span>
+      </div>
+      <hr />
+      <div class="total info">
+        <span>Total:</span>
+        <span>{{ total | currency }}</span>
+      </div>
+    </div>
+  </div>
+</div>

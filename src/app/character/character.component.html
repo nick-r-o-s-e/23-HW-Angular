@@ -1,0 +1,41 @@
+<div class="main-container">
+  <button
+    class="get-btn"
+    mat-raised-button
+    color="accent"
+    (click)="getCharacter()"
+  >
+    GET RANDOM CHARACTER
+  </button>
+  <div class="character">
+    <ng-container *ngIf="character; else logo">
+      <div
+        class="image-div"
+        style="background-image: url('{{ character.image }}');"
+      ></div>
+      <div class="content">
+        <h1>{{ character.name }}</h1>
+        <div class="characteristics">
+          <h2>{{ character.status }} -</h2>
+          &nbsp;
+          <h2>{{ character.species }}</h2>
+        </div>
+        <div class="details">
+          <div class="detail">
+            <h3>Last known location:</h3>
+            <p>{{ character.location.name }}</p>
+          </div>
+          <div class="detail">
+            <h3>First seen in:</h3>
+            <p>{{ character.firstSeenIn }}</p>
+          </div>
+        </div>
+      </div>
+    </ng-container>
+    <ng-template #logo>
+      <div class="placeholder-logo">
+        <img src="../../assets/images/Rick-and-Morty-logo.png" alt="" />
+      </div>
+    </ng-template>
+  </div>
+</div>

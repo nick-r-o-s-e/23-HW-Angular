@@ -1,0 +1,27 @@
+.navbar {
+  display: flex;
+  height: 90px;
+  background-color: #1d4457;
+  justify-content: center;
+  gap: 7em;
+  a {
+    font-size: 1.8em;
+    text-decoration: none;
+    align-self: center;
+    color: #ffffff;
+    letter-spacing: 1px;
+    transition: all 0.2s ease;
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+
+  .rick-btn {
+    border: 5px solid #61dda0;
+
+    background-image: url("../../assets/icons/rickmorty-icon.svg");
+    background-size: contain;
+    background-position: center;
+    background-color: transparent;
+  }
+}

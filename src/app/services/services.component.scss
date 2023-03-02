@@ -1,0 +1,63 @@
+.main-container {
+  display: flex;
+  justify-content: center;
+  .list-wrapper {
+    margin: 120px 10% 0;
+    border-radius: 0.375rem;
+    padding-bottom: 45px;
+    width: 640px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #5997b5;
+    height: fit-content;
+
+    h1 {
+      font-family: "Cookie", cursive;
+      font-size: 4.8em;
+      font-weight: 400;
+      margin: 60px 0 40px !important;
+      color: #fff;
+    }
+
+    .services {
+      display: flex;
+      flex-direction: column;
+      gap: 0.6em;
+      width: 78%;
+
+      .info {
+        border-radius: 0.375rem;
+
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding: 1.4em 1.7em;
+        font-size: 1.5em;
+        span {
+          color: #fff;
+          font-weight: 700;
+        }
+      }
+      .service-btn {
+        background-color: #e04d7b;
+        cursor: pointer;
+        transition: background-color 0.1s ease;
+        &.picked {
+          background-color: #83ba61;
+        }
+        &:hover {
+          filter: brightness(1.05);
+        }
+      }
+    }
+    hr {
+      width: 100%;
+      border-top: 1px solid #ffffff8f;
+    }
+
+    .total {
+      padding-top: 0 !important;
+    }
+  }
+}
